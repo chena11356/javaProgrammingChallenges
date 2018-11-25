@@ -1,0 +1,28 @@
+/*5) Smallest Multiple
+
+2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?*/
+
+public class smallestMultiple {
+  public static void main(String[] args){
+    int res;
+    int i = 1;
+    boolean temp = true;
+    while (true){
+      for (int j = 1; j <= 20; j++){
+        if (!(i%j==0))
+          temp = false;
+      }
+    
+      if (temp){
+        res = i;
+        break;
+      }
+    
+      i++;
+      temp = true;
+    }
+    System.out.println("Smallest multiple of all numbers from 1 to 20: "+res); //takes a few seconds to run, but it works
+  }
+}
